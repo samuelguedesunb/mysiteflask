@@ -2799,3 +2799,21 @@ body {
     margin-top: 100px;
   }
 }
+
+/* Estilo para o logo minimalista */
+.site-logo .logo-text {
+    font-family: 'Poppins', sans-serif; /* Use uma fonte moderna */
+    font-size: 24px; /* Tamanho do texto */
+    font-weight: 700; /* Negrito */
+    color: #ffffff; /* Cor branca */
+    text-decoration: none; /* Remove sublinhado */
+    letter-spacing: 2px; /* Espaçamento entre letras */
+    text-transform: uppercase; /* Transforma em maiúsculas */
+    display: block; /* Faz o link ocupar a linha inteira */
+    padding: 10px 20px; /* Espaçamento interno */
+    margin-bottom: 20px; /* Espaçamento abaixo do logo */
+}
+
+.site-logo .logo-text:hover {
+    color: #FFD15C; /* Cor ao passar o mouse */
+}
