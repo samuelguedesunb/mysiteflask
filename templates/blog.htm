@@ -1,87 +1,4 @@
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Blog Post - clzin</title>
-    <meta name="description" content="Blog Post - Samuel Guedes">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="../images/coruja.png">
-
-    <!-- STYLESHEETS -->
-    <link rel="stylesheet" href="./static/css/bootstrap.min.css" type="text/css" media="all">
-    <link rel="stylesheet" href="./static/css/all.min.css" type="text/css" media="all">
-    <link rel="stylesheet" href="./static/css/simple-line-icons.css" type="text/css" media="all">
-    <link rel="stylesheet" href="./static/css/slick.css" type="text/css" media="all">
-    <link rel="stylesheet" href="./static/css/animate.css" type="text/css" media="all">
-    <link rel="stylesheet" href="./static/css/magnific-popup.css" type="text/css" media="all">
-    <link rel="stylesheet" href="./static/css/style.css" type="text/css" media="all">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-</head>
-<body class="dark">
-
-<!-- Preloader -->
-<div id="preloader" style="display: none;">
-    <div class="outer">
-        <!-- Google Chrome -->
-        <div class="infinityChrome">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <!-- Safari and others -->
-        <div class="infinity">
-            <div>
-                <span></span>
-            </div>
-            <div>
-                <span></span>
-            </div>
-            <div>
-                <span></span>
-            </div>
-        </div>
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo-outer">
-            <defs>
-                <filter id="goo">
-                    <fegaussianblur in="SourceGraphic" stdDeviation="6" result="blur"></fegaussianblur>
-                    <fecolormatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></fecolormatrix>
-                    <feblend in="SourceGraphic" in2="goo"></feblend>
-                </filter>
-            </defs>
-        </svg>
-    </div>
-</div>
-
-<!-- mobile header -->
-<header class="mobile-header-1">
-    <div class="container">
-        <!-- menu icon -->
-        <div class="menu-icon d-inline-flex mr-4">
-            <button>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-<!-- desktop header -->
-<header class="desktop-header-1 d-flex align-items-start flex-column">
-
-    <!-- main menu -->
-    <nav>
-        <ul class="vertical-menu scrollspy">
-            <li><a href="{{ url_for('home') }}" class="nav-link"><i class="icon-home"></i>Home</a></li>
-            <li><a href="" class="nav-link"><i class="icon-user-following"></i>About</a></li>
-            <li><a href="" class="nav-link"><i class="icon-graduation"></i>Experience</a></li>
-            <li><a href="" class="nav-link"><i class="icon-note"></i>Blog</a></li>
-        </ul>
-    </nav>
-    <!-- site footer -->
-    <div class="footer">
-        <span class="copyright">© 2020 Bolby Template.</span>
-    </div>
-</header>
-
+{% include "header.html" %}
 <!-- main layout -->
 <main class="content">
     <!-- section blog post -->
@@ -89,14 +6,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <!-- blog post content -->
+                    <!-- blog post titulo -->
                     <div class="blog-post-content rounded bg-dark shadow-light padding-30">
-                        <h1 class="mb-4">Visualize Your Financial Budget</h1>
+                        <h1 class="mb-4">{{ post.titulo }}</h1>
                         <ul class="list-inline meta mb-4">
-                            <li class="list-inline-item">09 February, 2025</li>
+                            <li class="list-inline-item">{{ post.data}}</li>
                             <li class="list-inline-item">Samuel Guedes</li>
                         </ul>
-                        <img src="./static/images/1(1).svg" alt="blog-title" class="img-fluid mb-4">
+                        <!-- blog post body -->
+                        <img src="{{ url_for('static', filename='images/' + post.img) }}" alt="blog-title" class="img-fluid mb-4 blog-image">
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         </p>
@@ -113,26 +31,4 @@
     </section>
 </main>
 
-<!-- Go to top button -->
-<a href="javascript:" id="return-to-top" style="display: none;"><i class="fas fa-arrow-up"></i></a>
-
-<!-- SCRIPTS -->
-<script src="./static/css/jquery-1.12.3.min.js"></script>
-<script src="./static/css/jquery.easing.min.js"></script>
-<script src="./static/css/jquery.waypoints.min.js"></script>
-<script src="./static/css/jquery.counterup.min.js"></script>
-<script src="./static/css/popper.min.js"></script>
-<script src="./static/css/bootstrap.min.js"></script>
-<script src="./static/css/isotope.pkgd.min.js"></script>
-<script src="./static/css/infinite-scroll.min.js"></script>
-<script src="./static/css/imagesloaded.pkgd.min.js"></script>
-<script src="./static/css/slick.min.js"></script>
-<script src="./static/css/contact.js"></script>
-<script src="./static/css/validator.js"></script>
-<script src="./static/css/wow.min.js"></script>
-<script src="./static/css/morphext.min.js"></script>
-<script src="./static/css/parallax.min.js"></script>
-<script src="./static/css/jquery.magnific-popup.min.js"></script>
-<script src="./static/css/custom.js"></script>
-</body>
-</html>
+{% include "footer.html" %}

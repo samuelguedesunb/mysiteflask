@@ -2598,6 +2598,12 @@ body.dark .blog-page-section .blog-single {
   width: 10px;
 }
 
+.blog-image {
+    width: 600px;
+    height: 400px;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
 /*=================================================================*/
 /*                      RESPONSIVE SETTINGS
 /*=================================================================*/
