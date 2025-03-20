@@ -95,7 +95,7 @@
 	<!-- main menu -->
 	<nav>
 		<ul class="vertical-menu scrollspy">
-			<li class="active"><a href="#home" class="nav-link active"><i class="icon-home"></i>Home</a></li>
+			<li class="{{ 'active' if active_page == 'home' else '' }}"><a href="{{ url_for('home') }}#home" class="nav-link active"><i class="icon-home"></i>Home</a></li>
 			<li><a href="#about" class="nav-link"><i class="icon-user-following"></i>About</a></li>
 			<li><a href="#experience" class="nav-link"><i class="icon-graduation"></i>Experience</a></li>
 			<li><a href="#blog" class="nav-link"><i class="icon-note"></i>Blog</a></li>
