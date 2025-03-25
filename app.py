@@ -28,7 +28,7 @@ def get_post(post_id):
         return "Post não encontrado", 404
 
     # Definir se o formulário deve ser exibido (apenas para o post com id 3, por exemplo)
-    exibir_formulario = requested_post.id == 1
+    exibir_formulario = requested_post.id == 4
 
     return render_template('blog.htm', post=requested_post, exibir_formulario=exibir_formulario)
 

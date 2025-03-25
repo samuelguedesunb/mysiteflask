@@ -2,8 +2,8 @@
 <html lang="en-US">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Blog Post - clzin</title>
-    <meta name="description" content="Blog Post - Samuel Guedes">
+    <title>Guedes</title>
+    <meta name="description" content="Postagens do Blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="../images/coruja.png">
 
@@ -71,13 +71,13 @@
     <nav>
         <ul class="vertical-menu scrollspy">
             <li><a href="{{ url_for('home') }}" class="nav-link"><i class="icon-home"></i>Home</a></li>
-            <li><a href="" class="nav-link"><i class="icon-user-following"></i>About</a></li>
-            <li><a href="" class="nav-link"><i class="icon-graduation"></i>Experience</a></li>
-            <li><a href="" class="nav-link"><i class="icon-note"></i>Blog</a></li>
+            <li><a href="{{ url_for('home') }}#about" class="nav-link"><i class="icon-user-following"></i>About</a></li>
+            <li><a href="{{ url_for('home') }}#experience" class="nav-link"><i class="icon-graduation"></i>Experience</a></li>
+            <li><a href="{{ url_for('home') }}#blog" class="nav-link"><i class="icon-note"></i>Blog</a></li>
         </ul>
     </nav>
     <!-- site footer -->
     <div class="footer">
-        <span class="copyright">© 2020 Bolby Template.</span>
+        <span class="copyright">.</span>
     </div>
 </header>
